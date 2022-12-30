@@ -21,6 +21,14 @@ var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", 
 function generatePassword(){
     var password = "";
     var length = parseInt(prompt("What's the length?(8-128)")); 
+      if (length<8){
+        alert("Password must contain at least 8 characters")
+        return ""
+      }
+      if (length>128){
+        alert("Password cannot contain more than 128 characters")
+        return ""
+      }
       console.log(length);
     var hasLower = confirm("Do you want lowercase?");
       console.log(hasLower);
@@ -45,8 +53,9 @@ function generatePassword(){
     console.log(possibleCharacters);
 
     for(var i=0;i<length;i++){
-  // generate number
-  // concat into password variable
+      password = possibleCharacters[Math.floor(Math.random() * possibleCharacters.length)]
+      console.log(password);
+     
     }
   return password
   }
