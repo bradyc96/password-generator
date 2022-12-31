@@ -50,15 +50,12 @@ function generatePassword(){
       if(hasSpecialCharacters == true){
         possibleCharacters = possibleCharacters.concat(specialCharacters);
       }
-    console.log(possibleCharacters);
-
-    for(var i=0;i<length;i++){
-      password = possibleCharacters[Math.floor(Math.random() * possibleCharacters.length)]
+    for(var i=0; i<length; i++){
+      password += possibleCharacters[Math.floor(Math.random() * possibleCharacters.length)];
       console.log(password);
-     
     }
-  return password
-  }
+  return password;
+}
 
 
 // Get references to the #generate element
@@ -68,7 +65,6 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
 
 }
