@@ -20,7 +20,7 @@ var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", 
 
 function generatePassword(){
     var password = "";
-    var length = parseInt(prompt("What's the length?(8-128)")); 
+    var length = parseInt(prompt("What's your password length? (8-128)")); 
       if (length<8){
         alert("Password must contain at least 8 characters")
         return ""
@@ -54,7 +54,7 @@ function generatePassword(){
       password += possibleCharacters[Math.floor(Math.random() * possibleCharacters.length)];
       console.log(password);
     }
-  return password;
+    return password;
 }
 
 
